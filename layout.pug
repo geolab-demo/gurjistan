@@ -40,7 +40,9 @@ html(lang="ka")
                         <span class="icon-scroll aside_icon"></span>
                         span.count 7 
             .container
-                .right_side
+                block variables
+                .right_side(class=bgImage ? 'background' : ' ')
+
                     header
                         nav#menu
                             ul.header_navigation
