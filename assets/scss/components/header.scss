@@ -1,0 +1,13 @@
+//header
+header {
+	@include vertical;
+	height: 100px;
+}
+.header_navigation_link {
+	color: $color_black;
+	font-size: $text_size;
+}
+.header_navigation_link:hover {
+	border-bottom: 1px solid $hover_color;
+	padding-bottom: 10px;
+}

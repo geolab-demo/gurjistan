@@ -1,0 +1,17 @@
+// left_side
+.left_side {
+	@include hor_center;
+	grid-gap: 20px;
+	background-color: $left_size_background;
+}
+.aside_navigation_item {
+	@include hor_center;
+	color: $color_white;
+}
+.aside_navigation_item_title {
+	font-size: $text_size;
+	color: $color_white;
+}
+.count {
+	text-align: center;
+}

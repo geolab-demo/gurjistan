@@ -1,0 +1,8 @@
+.articles_content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px; }
+
+.author {
+  font-size: 18px;
+  padding-bottom: 20px; }

@@ -1,0 +1,13 @@
+@mixin center {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+@mixin hor_center {
+    display: grid;
+    justify-content: center;
+}
+@mixin vertical {
+	display: grid;
+	align-items: center;
+}
