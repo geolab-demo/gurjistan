@@ -1,6 +1,7 @@
 //header
 header {
-	@include vertical;
+	//@include vertical;
+	@extend %vertical;
 	height: 100px;
 	width: 80%;
 	margin: 0 auto;
