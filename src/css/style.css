@@ -1,5 +1,4 @@
 header {
-  display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -12,7 +11,6 @@ header {
   text-decoration: none; }
 
 .logo {
-  display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -30,7 +28,6 @@ header {
   width: 100%; }
 
 .left_side {
-  display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -39,7 +36,6 @@ header {
   background-color: #2e2821; }
 
 .aside_navigation_item {
-  display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -68,20 +64,10 @@ header {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.ttf"); }
+  src: url("../../assets/fonts/icomoon.ttf"); }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  font-family: 'icomoon' !important; }
 
 .icon-search:before {
   content: "\e900";
@@ -104,7 +90,6 @@ header {
   color: #fff; }
 
 .aside_icon {
-  display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -115,13 +100,10 @@ header {
   font-size: 25px; }
 
 .right_side {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 3fr;
   grid-template-rows: 1fr 3fr;
   position: relative;
-  height: 100vh;
-  /*background: url("../images/mainImg.png")*/ }
+  height: 100vh; }
 
 .main_img {
   width: 100%;
@@ -132,11 +114,8 @@ header {
   padding-bottom: 30px; }
 
 .about_content {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .5fr 3fr;
-  grid-template-rows: .5fr 3fr;
-  margin: 0 20px; }
+  grid-template-rows: .3fr .1fr; }
 
 .about_content_title {
   font-size: 36px; }
@@ -146,11 +125,14 @@ header {
   -o-object-fit: cover;
   object-fit: cover; }
 
-.articles_item {
-  display: -ms-grid;
+.articles_page {
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-rows: repeat(2, 1fr); }
+
+.articles_item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px 0; }
 
 .articles_item_title {
   font-size: 30px;
@@ -158,20 +140,21 @@ header {
   padding-bottom: 30px; }
 
 .articles_item_text {
-  width: 365px;
+  max-width: 365px;
   height: 175px;
   overflow: hidden;
   margin-bottom: 50px;
   font-size: 14px; }
 
 .more {
+  max-width: 150px;
+  text-align: center;
   padding: 20px;
   color: #fff;
   font-size: 14px;
   background-color: #DF4B4B; }
 
 .articles_content {
-  display: -ms-grid;
   display: grid;
   grid-gap: 20px; }
 
@@ -184,7 +167,6 @@ header {
 
 @media only screen and (min-width: 320px) {
   .page {
-    display: -ms-grid;
     display: grid; }
   .resp_menu {
     position: absolute;
@@ -192,18 +174,26 @@ header {
   /*about page*/
   .about_page {
     width: 90%;
-    display: -ms-grid;
     display: grid;
     grid-gap: 30px;
     margin: 20px auto; }
-  .about_info {
-    display: -ms-grid;
+  .articles_item {
     display: grid;
-    grid-gap: 25px; } }
+    grid-template-columns: 1fr;
+    grid-gap: 20px 0;
+    margin: 10px; }
+  .articles_content {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .articles_item_img img {
+    width: 100%; } }
 
 @media only screen and (min-width: 720px) {
   .aside_navigation {
-    display: -ms-grid;
     display: grid; }
   .resp_menu {
     display: none; }
@@ -214,7 +204,11 @@ header {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     position: relative;
-    z-index: 1; } }
+    z-index: 1; }
+  .articles_item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 0; } }
 
 @media only screen and (max-width: 991px) {
   .header_navigation {
@@ -232,11 +226,9 @@ header {
 
 @media only screen and (min-width: 992px) {
   .page {
-    -ms-grid-columns: 1fr 3fr;
     grid-template-columns: 1fr 3fr; }
   /*about page*/
   .about_page {
-    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr; } }
 
 .resp_menu {

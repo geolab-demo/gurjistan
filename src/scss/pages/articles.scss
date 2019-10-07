@@ -1,6 +1,12 @@
+.articles_page {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    // grid-gap: 100px 0;
+}
 .articles_item {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	margin: 30px 0;
 }
 .articles_item_title {
 	font-size: 30px;
@@ -8,13 +14,15 @@
 	padding-bottom: 30px;
 }
 .articles_item_text {
-	width: 365px;
+	max-width: 365px;
 	height: 175px;
 	overflow: hidden;
 	margin-bottom: 50px;
 	font-size: $text_size;
 }
 .more {
+ 	max-width: 150px;
+    text-align: center;
 	padding: 20px;
 	color: $color_white;
 	font-size: $text_size;
