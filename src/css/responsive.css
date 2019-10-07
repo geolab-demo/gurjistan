@@ -60,6 +60,18 @@
 @media only screen and (min-width: 992px) {
   .page {
     grid-template-columns: 1fr 3fr; }
+  .left_side {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    right: 80%; }
+  .right_side {
+    position: absolute;
+    left: 20%;
+    right: 0;
+    height: 100vh; }
   /*about page*/
   .about_page {
     grid-template-columns: 1fr 1fr; } }
