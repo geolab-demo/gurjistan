@@ -62,6 +62,11 @@ header {
   border-bottom: 1px solid #DF4B4B;
   padding-bottom: 10px; }
 
+.bgImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../../assets/fonts/icomoon.ttf"); }
