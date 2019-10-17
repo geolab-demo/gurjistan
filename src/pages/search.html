@@ -11,12 +11,12 @@
     <meta property="og:url" content=""/>
     <meta property="og:image" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="css/style.css"/>
-    <title>მთავარი</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>ჩვენ შესახებ </title>
   </head>
   <body>
     <div class="page">
-      <aside class="left_side"><a class="logo" href="index.html"><img src="assets/images/static/logo.png" alt="logo"/></a>
+      <aside class="left_side"><a class="logo" href="../index.html"><img src="../assets/images/static/logo.png" alt="logo"/></a>
         <ul class="aside_navigation">
           <li class="aside_navigation_item">
             <a href="#!">
@@ -44,26 +44,39 @@
             <span class="count">7 </span></li>
         </ul>
       </aside>
-        <div class="right_side" style="background-image: url(assets/images/mainImg.png)" id="right_side">
+        <div class="right_side  ">
           <div class="container">
-            <header>
-              <nav id="menu" class="header_menu">
-                <ul class="header_navigation" id="header_navigation">
-                  <li><a class="header_navigation_link" href="index.html">მთავარი</a></li>
-                  <li><a class="header_navigation_link" href="pages/search.html">ფილტრი</a></li>
-                  <li><a class="header_navigation_link" href="pages/articles.html">სტატიები</a></li>
-                  <li><a class="header_navigation_link" href="pages/about.html">ჩვენ შესახებ</a></li>
-                  <li><a class="header_navigation_link" href="pages/contact.html">კონტაქტი</a></li>
-                </ul>
-              </nav>
-              <ul class="resp_menu">
-                <li class="toggler_item"></li>
+          <header>
+            <nav id="menu">
+              <ul class="header_navigation">
+                <li><a class="header_navigation_link" href="../index.html">მთავარი</a></li>
+                <li><a class="header_navigation_link" href="search.html">ფილტრი</a></li>
+                <li><a class="header_navigation_link" href="articles.html">სტატიები</a></li>
+                <li><a class="header_navigation_link" href="about.html">ჩვენ შესახებ</a></li>
+                <li><a class="header_navigation_link" href="contact.html">კონტაქტი</a></li>
               </ul>
-            </header>
+            </nav>
+            <ul class="resp_menu">
+              <li class="toggler_item"></li>
+            </ul>
+          </header>
           <!--content -->
+          <main>
+              <div class="search_info">
+                  <ul class="alphabet">
+                  </ul>
+                  <div class="search_form">
+                    <input type="text" placeholder="ძებნა">
+                  </div>
+              </div>
+              <ul class="search_content">
+              </ul>
+          </main>
+          </div>
         </div>
       </div>
-      </div>
-      <script src="js/script.js"></script>
+    </div>
+    <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
