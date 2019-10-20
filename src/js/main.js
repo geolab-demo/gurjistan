@@ -1,6 +1,6 @@
 if(checkPage('search')) {
     // search page
-  let peopleList = document.querySelector('.search_content');
+  var peopleList = document.querySelector('.search_content');
   let alphabetList = document.querySelector('.alphabet');
   let alphabet = [];
 
@@ -19,7 +19,7 @@ if(checkPage('search')) {
       let filteredPeople = people.filter( p => p.surname.slice(0, 1) === i.value);
       filteredPeople.forEach(p => {
         selectedPeople.innerHTML += `
-         <li>${p.name} ${p.surname}</li>`;
+         <li class="personData">${p.name} ${p.surname}</li>`;
       });
     });
   }
@@ -44,5 +44,35 @@ if(checkPage('search')) {
     const response = await fetch('../storage/alphabet.json');
     alphabet = await response.json();
     people.length ? populatePeople() : '';
+  }
+
+  //search
+  const search = document.getElementById('search');
+  
+  search.addEventListener('keyup', searchFilter);
+  function searchFilter(){
+    alphabet.forEach(i => {
+     
+      let filteredPeople = people.filter( p => p.surname.slice(0, 1) === i.value);
+      filteredPeople.forEach(p => {   
+        if(search.value === p.surname) {
+          let filteredPerson = people.filter( p => p.surname === search.value);
+          selectedPeople = document.querySelector(`.peopleList_${i.id}`);
+           let peopleContentList = document.querySelectorAll('.search_content_list');
+            peopleContentList.forEach(i => {
+              i.style.display = 'none';
+            });
+            filteredPerson.forEach(person=> {
+              selectedPeople.style.display = 'block';
+              let personData = document.querySelectorAll('.personData')
+              personData.forEach(personData => {
+                personData.style.display = 'none'
+              })
+              selectedPeople.innerHTML += `
+               <li class="personData">${person.name} ${person.surname}</li>`;  
+            })
+           }
+      });
+    })
   }
 }
