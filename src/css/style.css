@@ -69,7 +69,7 @@ header {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../../assets/fonts/icomoon.ttf"); }
+  src: url("../assets/fonts/icomoon.ttf"); }
 
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon' !important; }
