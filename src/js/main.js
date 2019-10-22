@@ -34,10 +34,11 @@ if(checkPage('search')) {
   
    filterPeopleWithAlphabet = (id) => {
     let selectedPeople = document.querySelector(`.peopleList_${id}`);
-
+    let peopleContentList = document.querySelectorAll('.search_content_list');
     peopleContentList.forEach(i => {
       i.style.display = 'none';
     });
+    peopleChildren()
     selectedPeople.style.display = 'block';
   }
 
@@ -49,7 +50,7 @@ if(checkPage('search')) {
 
   //search
   const search = document.getElementById('search');
-  
+
   search.addEventListener('keyup', function(e) {
     e.preventDefault();
     let searchPerson = [...people];
@@ -58,7 +59,32 @@ if(checkPage('search')) {
     }
     peopleList.innerHTML = '';
     populatePeople(searchPerson, true);
-
   });
- 
 }
+
+
+function peopleChildren() {
+  let peopleContentList = document.querySelectorAll('.search_content_list');
+    peopleContentList.forEach(i => {
+     
+      let peopleChilren = i.childNodes[1].children;
+      let currentIndex = 0;
+      let maxresult =2;
+			for(let i=0; i< maxresult; i++) {
+				if( peopleChilren.length > maxresult) {
+          // let selectedPeople = document.querySelector(`.people_${i.id}`);
+          // selectedPeople.innerHTML += `
+          //     <li>სრულად</li>`;
+					Array.from(peopleChilren).forEach(data => {
+            console.log(data)
+            // selectedPeople.innerHTML += `
+            //    <li>სრულად</li>`;
+            console.log(peopleChilren[2])
+            
+          })
+				}
+      }//   currentIndex += maxresult;
+    })
+    
+}
+

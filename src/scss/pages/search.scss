@@ -1,31 +1,12 @@
-.search_info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
 .alphabet {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.search_form {
-    display: grid;
-    justify-content: flex-end;
-}
-
 // search_content
-.search_content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 20px 0;
-}
-// .search_content_list {
-//     display: none;
-// }
 .search_content_list.show {
     display: block;
 }
-.search_content_list:active.show {
+.more_list {
     color: red;
 }
