@@ -15,13 +15,25 @@ if(checkPage('search')) {
           <li><a onclick="filterPeopleWithAlphabet('${i.id}')" class="alphabet_${i.id}">${i.value}</a></li>`;
       }
       peopleList.innerHTML += `
-      <li class="search_content_list peopleList_${i.id}">${i.value}<ul class="people_${i.id}"></ul></li>`;
+      <li class="search_content_list peopleList_${i.id}">${i.value}<ul class="people_${i.id}"></ul><button onclick="showMorePeople('${i.id}')" class="btn_${i.id}">სრულად</button></li>`;
 
       let selectedPeople = document.querySelector(`.people_${i.id}`);
       let filteredPeople = peopleArr.filter( p => p.surname.slice(0, 1) === i.value);
-      filteredPeople.forEach(p => {
+      let maxResultCount = 1;
+      let selectedbtn = document.querySelector(`.btn_${i.id}`);
+
+      if(maxResultCount >= filteredPeople.length) {
+        selectedbtn.style.display = 'none';
+      }
+
+      filteredPeople.forEach((p, index) => {
         selectedPeople.innerHTML += `
          <li class="personData">${p.name} ${p.surname}</li>`;
+         if(index < maxResultCount) {
+            Array.from(selectedPeople.children).forEach(i => {
+              i.style.display = 'block';
+            })
+         }
       });
     });
   }
@@ -42,6 +54,28 @@ if(checkPage('search')) {
     selectedPeople.style.display = 'block';
   }
 
+  showMorePeople = (id) => {
+    let selectedPeople = document.querySelector(`.peopleList_${id}`);
+    let selectedPeopleList = Array.from(selectedPeople.firstElementChild.children);
+    let lastShownElementIndex = 0;
+    selectedPeopleList.forEach((i, index) => {
+      if(i.style.display == 'block') {
+        lastShownElementIndex = index;
+      }
+    });
+
+    lastShownElementIndex += 1;
+    selectedPeopleList.forEach((i, index) => {
+      if(index <= lastShownElementIndex) {
+        i.style.display = 'block'
+        if(index == selectedPeopleList.length - 1) {
+          let selectedbtn = document.querySelector(`.btn_${id}`);
+          selectedbtn.style.display = 'none';
+        }
+      }
+    });
+  }
+
   async function getAlphabet() {
     const response = await fetch('../storage/alphabet.json');
     alphabet = await response.json();
@@ -50,7 +84,6 @@ if(checkPage('search')) {
 
   //search
   const search = document.getElementById('search');
-
   search.addEventListener('keyup', function(e) {
     e.preventDefault();
     let searchPerson = [...people];
@@ -61,30 +94,3 @@ if(checkPage('search')) {
     populatePeople(searchPerson, true);
   });
 }
-
-
-function peopleChildren() {
-  let peopleContentList = document.querySelectorAll('.search_content_list');
-    peopleContentList.forEach(i => {
-     
-      let peopleChilren = i.childNodes[1].children;
-      let currentIndex = 0;
-      let maxresult =2;
-			for(let i=0; i< maxresult; i++) {
-				if( peopleChilren.length > maxresult) {
-          // let selectedPeople = document.querySelector(`.people_${i.id}`);
-          // selectedPeople.innerHTML += `
-          //     <li>სრულად</li>`;
-					Array.from(peopleChilren).forEach(data => {
-            console.log(data)
-            // selectedPeople.innerHTML += `
-            //    <li>სრულად</li>`;
-            console.log(peopleChilren[2])
-            
-          })
-				}
-      }//   currentIndex += maxresult;
-    })
-    
-}
-

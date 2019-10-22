@@ -132,6 +132,9 @@ a:hover {
 .more_list {
   color: red; }
 
+.personData {
+  display: none; }
+
 .about_page {
   padding-bottom: 30px; }
 
