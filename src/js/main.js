@@ -12,14 +12,15 @@ if(checkPage('search')) {
     alphabet.forEach(i => {
       if(!fromSearch) {        
         alphabetList.innerHTML += `
-          <li><a onclick="filterPeopleWithAlphabet('${i.id}')" class="alphabet_${i.id}">${i.value}</a></li>`;
+          <li><a onclick="filterPeopleWithAlphabet('${i.id}')" class="alphabet_${i.id} alphabet">${i.value}</a></li>`;
       }
       peopleList.innerHTML += `
-      <li class="search_content_list peopleList_${i.id}">${i.value}<ul class="people_${i.id}"></ul><button onclick="showMorePeople('${i.id}')" class="btn_${i.id}">სრულად</button></li>`;
+      <li class="search_content_list peopleList_${i.id}">${i.value}<ul class="people_${i.id}"></ul>
+      <button onclick="showMorePeople('${i.id}')" class="btn_${i.id} moreInfo">სრულად</button></li>`;
 
       let selectedPeople = document.querySelector(`.people_${i.id}`);
       let filteredPeople = peopleArr.filter( p => p.surname.slice(0, 1) === i.value);
-      let maxResultCount = 1;
+      let maxResultCount = 10;
       let selectedbtn = document.querySelector(`.btn_${i.id}`);
 
       if(maxResultCount >= filteredPeople.length) {

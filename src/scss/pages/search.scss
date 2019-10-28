@@ -7,10 +7,33 @@
 .search_content_list.show {
     display: block;
 }
+.search_content_list:first-child {
+    font-size: 24px
+}    
 .more_list {
     color: red;
 }
-
+.moreInfo {
+    font-size: 12px;
+    background: none;
+    border: none;
+}
 .personData {
     display: none;
+    color: $color_list;
+    font-size: 10px;
+}
+.alphabet {
+    color: $color_list;
+    font-size: 11px;
+}
+.alphabet:visited {
+    color: red;
+}
+.search_form input {
+    background: #EEEEEE;
+    border: none;
+    color: #9A9A9A;
+    font-size: 10px;
+    padding: 5px;
 }
