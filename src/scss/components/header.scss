@@ -14,6 +14,10 @@ header {
 	border-bottom: 1px solid $hover_color;
 	padding-bottom: 10px;
 }
+.header_navigation_link.active {
+	border-bottom: 1px solid $hover_color;
+	padding-bottom: 10px;
+}
 .bgImage {
 	background-repeat: no-repeat;
 	background-size: cover;

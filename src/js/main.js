@@ -29,7 +29,7 @@ if(checkPage('search')) {
 
       filteredPeople.forEach((p, index) => {
         selectedPeople.innerHTML += `
-         <li class="personData">${p.name} ${p.surname}</li>`;
+         <li class="personData"><a href="#!">${p.name} ${p.surname}</a></li>`;
          if(index < maxResultCount) {
             Array.from(selectedPeople.children).forEach(i => {
               i.style.display = 'block';

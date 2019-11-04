@@ -13,12 +13,12 @@ let rightSide = document.getElementById('right_side');
 
 const checkPage = (page) => window.location.pathname.split('/').slice(-1)[0] === `${page}.html`;
 
-headerColor =() => {
-    if(checkPage('index')) {
-        Array.from(headerNavigationLink).forEach(child =>{
-          child.style.color = '#fff';
-        });
-        rightSide.classList.add("bgImage");
-    }
-}
-headerColor();
+// headerColor =() => {
+//     if(checkPage('index')) {
+//         Array.from(headerNavigationLink).forEach(child =>{
+//           child.style.color = '#fff';
+//         });
+//         rightSide.classList.add("bgImage");
+//     }
+// }
+// headerColor();
