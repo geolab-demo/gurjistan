@@ -171,18 +171,6 @@ a:hover {
   font-size: 10px;
   padding: 5px; }
 
-.personAbout {
-  margin-bottom: 20px; }
-
-.personName {
-  border-bottom: 1px solid red; }
-
-.personAdditionalnfo {
-  margin-bottom: 30px; }
-
-.personAdditionalnfoType {
-  font-weight: 600; }
-
 .about_page {
   padding-bottom: 30px; }
 
@@ -260,6 +248,45 @@ a:hover {
 
 a {
   color: #000; }
+
+.sourse {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+
+.sourseFilterForm {
+  max-width: 320px; }
+
+.filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #fff; }
+
+.sourseFilterType {
+  border: 1px solid red;
+  color: #fff; }
+
+.sourseFilterType.active {
+  background-color: red; }
+
+.sourseFilterParametrs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.sourseSearch {
+  width: 100%;
+  padding: 10px;
+  background-color: red;
+  border: none;
+  color: #fff; }
 
 @media only screen and (min-width: 320px) {
   header {

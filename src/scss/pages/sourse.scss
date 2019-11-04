@@ -1,0 +1,31 @@
+.sourse {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.sourseFilterForm {
+    max-width: 320px;
+    // margin: 0 auto;
+}
+.filters {
+    display: flex;
+    justify-content: space-between;
+    color: $color_white;
+}
+.sourseFilterType {
+    border: 1px solid red;
+    color: $color_white;
+}
+.sourseFilterType.active {
+    background-color: red;
+}
+.sourseFilterParametrs {
+    display: flex;
+    flex-direction: column;
+}
+.sourseSearch {
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    border: none;
+    color: $color_white;
+}
