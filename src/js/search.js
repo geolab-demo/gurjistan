@@ -51,7 +51,6 @@ if(checkPage('search')) {
     peopleContentList.forEach(i => {
       i.style.display = 'none';
     });
-    // peopleChildren();
     selectedPeople.style.display = 'block';
   }
 

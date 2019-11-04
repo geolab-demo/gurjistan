@@ -1,75 +1,73 @@
 if(checkPage('populatedArea')) {
-    // search page
-  var peopleList = document.querySelector('.search_content');
+    // populatedAreas page
+  var populatedAreaList = document.querySelector('.search_content');
   let alphabetList = document.querySelector('.alphabet');
   let alphabet = [];
-  let people = [];
+  let populatedArea = [];
 
-  getPeople();
+  getpopulatedArea();
   getAlphabet();
 
-   populatePeople = (peopleArr, fromSearch) =>{
+   populatepopulatedArea = (populatedAreaArr, fromSearch) =>{
     alphabet.forEach(i => {
       if(!fromSearch) {        
         alphabetList.innerHTML += `
-          <li class="alphabetItem"><a onclick="filterPeopleWithAlphabet('${i.id}')" class="alphabet_${i.id}">${i.value}</a></li>`;
+          <li class="alphabetItem"><a onclick="filterpopulatedAreaWithAlphabet('${i.id}')" class="alphabet_${i.id}">${i.value}</a></li>`;
       }
-      peopleList.innerHTML += `
-      <li class="search_content_list peopleList_${i.id}">${i.value}<ul class="people_${i.id}"></ul>
-      <button onclick="showMorePeople('${i.id}')" class="btn_${i.id} moreInfo">სრულად</button></li>`;
+      populatedAreaList.innerHTML += `
+      <li class="search_content_list populatedAreaList_${i.id}">${i.value}<ul class="populatedArea_${i.id}"></ul>
+      <button onclick="showMorepopulatedArea('${i.id}')" class="btn_${i.id} moreInfo">სრულად</button></li>`;
 
-      let selectedPeople = document.querySelector(`.people_${i.id}`);
-      let filteredPeople = peopleArr.filter( p => p.surname.slice(0, 1) === i.value);
+      let selectedpopulatedArea = document.querySelector(`.populatedArea_${i.id}`);
+      let filteredpopulatedArea = populatedAreaArr.filter( p => p.surname.slice(0, 1) === i.value);
       let maxResultCount = 10;
       let selectedbtn = document.querySelector(`.btn_${i.id}`);
 
-      if(maxResultCount >= filteredPeople.length) {
+      if(maxResultCount >= filteredpopulatedArea.length) {
         selectedbtn.style.display = 'none';
       }
 
-      filteredPeople.forEach((p, index) => {
-        selectedPeople.innerHTML += `
-         <li class="personData"><a href="personDetailInfo.html">${p.name} ${p.surname}</a></li>`;
+      filteredpopulatedArea.forEach((p, index) => {
+        selectedpopulatedArea.innerHTML += `
+         <li class="personData"><a href="populatedAreaInfo.html">${p.name} ${p.surname}</a></li>`;
          if(index < maxResultCount) {
-            Array.from(selectedPeople.children).forEach(i => {
+            Array.from(selectedpopulatedArea.children).forEach(i => {
               i.style.display = 'block';
             })
          }
       });
     });
   }
-
-  async function getPeople() {
-    const response = await fetch('../storage/people.json');
-    people = await response.json();
-    alphabet.length ? populatePeople(people, false) : '';
+  async function getpopulatedArea() {
+    const response = await fetch('../storage/populatedArea.json');
+    populatedArea = await response.json();
+    alphabet.length ? populatepopulatedArea(populatedArea, false) : '';
   }
   
-   filterPeopleWithAlphabet = (id) => {
-    let selectedPeople = document.querySelector(`.peopleList_${id}`);
-    let peopleContentList = document.querySelectorAll('.search_content_list');
-    peopleContentList.forEach(i => {
+   filterpopulatedAreaWithAlphabet = (id) => {
+    let selectedpopulatedArea = document.querySelector(`.populatedAreaList_${id}`);
+    let populatedAreaContentList = document.querySelectorAll('.search_content_list');
+    populatedAreaContentList.forEach(i => {
       i.style.display = 'none';
     });
-    // peopleChildren();
-    selectedPeople.style.display = 'block';
+    selectedpopulatedArea.style.display = 'block';
   }
 
-  showMorePeople = (id) => {
-    let selectedPeople = document.querySelector(`.peopleList_${id}`);
-    let selectedPeopleList = Array.from(selectedPeople.firstElementChild.children);
+  showMorepopulatedArea = (id) => {
+    let selectedpopulatedArea = document.querySelector(`.populatedAreaList_${id}`);
+    let selectedpopulatedAreaList = Array.from(selectedpopulatedArea.firstElementChild.children);
     let lastShownElementIndex = 0;
-    selectedPeopleList.forEach((i, index) => {
+    selectedpopulatedAreaList.forEach((i, index) => {
       if(i.style.display == 'block') {
         lastShownElementIndex = index;
       }
     });
 
     lastShownElementIndex += 1;
-    selectedPeopleList.forEach((i, index) => {
+    selectedpopulatedAreaList.forEach((i, index) => {
       if(index <= lastShownElementIndex) {
         i.style.display = 'block'
-        if(index == selectedPeopleList.length - 1) {
+        if(index == selectedpopulatedAreaList.length - 1) {
           let selectedbtn = document.querySelector(`.btn_${id}`);
           selectedbtn.style.display = 'none';
         }
@@ -80,18 +78,18 @@ if(checkPage('populatedArea')) {
   async function getAlphabet() {
     const response = await fetch('../storage/alphabet.json');
     alphabet = await response.json();
-    people.length ? populatePeople(people, false) : '';
+    populatedArea.length ? populatepopulatedArea(populatedArea, false) : '';
   }
 
   //search
   const search = document.getElementById('search');
   search.addEventListener('keyup', function(e) {
     e.preventDefault();
-    let searchPerson = [...people];
+    let searchPerson = [...populatedArea];
     if(this.value) {
-      searchPerson = people.filter(p => p.surname.indexOf(this.value) >= 0 ||  p.name.indexOf(this.value) >= 0);
+      searchPerson = populatedArea.filter(p => p.surname.indexOf(this.value) >= 0 ||  p.name.indexOf(this.value) >= 0);
     }
-    peopleList.innerHTML = '';
-    populatePeople(searchPerson, true);
+    populatedAreaList.innerHTML = '';
+    populatepopulatedArea(searchPerson, true);
   });
 }
