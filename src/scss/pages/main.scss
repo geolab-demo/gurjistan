@@ -1,18 +1,15 @@
 .right_side {
 	background-size: cover;
 }
+main {
+	position: relative;
+	margin: 0 20px;
+}
 .main_img {
 	width: 100%;
 	position: absolute;
 	top: 0;
 }
-
 a:hover {
 	cursor: pointer;
-}
-.color .header_navigation_link{
-	color: #fff;
-}
-main {
-	position: relative;
 }

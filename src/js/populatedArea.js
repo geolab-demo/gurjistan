@@ -1,4 +1,4 @@
-if(checkPage('search')) {
+if(checkPage('populatedArea')) {
     // search page
   var peopleList = document.querySelector('.search_content');
   let alphabetList = document.querySelector('.alphabet');
@@ -12,7 +12,7 @@ if(checkPage('search')) {
     alphabet.forEach(i => {
       if(!fromSearch) {        
         alphabetList.innerHTML += `
-          <li><a onclick="filterPeopleWithAlphabet('${i.id}')" class="alphabet_${i.id} alphabet">${i.value}</a></li>`;
+          <li class="alphabetItem"><a onclick="filterPeopleWithAlphabet('${i.id}')" class="alphabet_${i.id}">${i.value}</a></li>`;
       }
       peopleList.innerHTML += `
       <li class="search_content_list peopleList_${i.id}">${i.value}<ul class="people_${i.id}"></ul>
@@ -29,7 +29,7 @@ if(checkPage('search')) {
 
       filteredPeople.forEach((p, index) => {
         selectedPeople.innerHTML += `
-         <li class="personData"><a href="#!">${p.name} ${p.surname}</a></li>`;
+         <li class="personData"><a href="personDetailInfo.html">${p.name} ${p.surname}</a></li>`;
          if(index < maxResultCount) {
             Array.from(selectedPeople.children).forEach(i => {
               i.style.display = 'block';
@@ -51,7 +51,7 @@ if(checkPage('search')) {
     peopleContentList.forEach(i => {
       i.style.display = 'none';
     });
-    peopleChildren()
+    // peopleChildren();
     selectedPeople.style.display = 'block';
   }
 

@@ -1,4 +1,7 @@
 @media only screen and (min-width: 320px){
+	header {
+		height: 20px;
+	}
 	/*resp_menu*/
 	.header_menu{
 		display: none;
@@ -34,6 +37,9 @@
 		background-color: #fff;
 		border-radius: 10px;
 		transition: all ease-in-out 0.3s;
+	}
+	.toggler_item.open::before, .toggler_item.open::after{
+		background-color: #000;
 	}
 	.toggler_item::before {
 		transform: translateY(-8px);
@@ -105,12 +111,9 @@
 	.search_info {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-gap: 20px;
-		padding: 0 10px;
 	}
 	.search_form {
 		display: grid;
-		justify-content: center;
 	}
 	.search_content {
 		display: grid;
@@ -119,13 +122,17 @@
 		padding-right: 30px;
 	}
 	.alphabet_container {
+		height: 100%;
 		display: flex;
-		color: #9A9A9A;
-		font-size: 11px;
+		flex-direction: column;
 		position: absolute;
 		right: 15px;
-		flex-direction: column;
-		height: 100%;
+		top: 25px;
+		color: #9A9A9A;
+		font-size: 11px;
+	}
+	.color .header_navigation_link {
+		color: #000;
 	}
 }
 @media only screen and (min-width: 720px){
@@ -149,6 +156,7 @@
 	//search page
 	.search_info {
 		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 20px;
 	}
 	.search_form {
 		justify-content: flex-end;
@@ -162,7 +170,9 @@
 	.alphabet_container {
 		width: 100%;
 		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
+		position: static;
 	}
 }
 @media only screen and (max-width: 991px){
@@ -181,11 +191,17 @@
 	}
 }
 @media only screen and (min-width: 992px){
+	header {
+		height: 100px;
+	}
 	.resp_menu {
 		display: none;
 	}
 	.header_menu {
 		display: block;
+	}
+	.color .header_navigation_link {
+		color: #fff;
 	}
 	.page {
 		grid-template-columns: 1fr 3fr;

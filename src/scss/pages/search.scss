@@ -18,12 +18,11 @@
     color: $color_list;
     font-size: 10px;
 }
-.alphabet {
-    color: $color_list;
-    font-size: 11px;
-}
 .alphabet:visited {
     color: red;
+}
+.alphabetItem {
+    padding: 10px 0;
 }
 .search_form input {
     background: #EEEEEE;
