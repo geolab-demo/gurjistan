@@ -1,13 +1,16 @@
 if(checkPage('search')) {
     // search page
-  var peopleList = document.querySelector('.search_content');
+  let peopleList = document.querySelector('.search_content');
+  let searchAll = document.querySelector('.search');
   let alphabetList = document.querySelector('.alphabet');
   let alphabet = [];
   let people = [];
 
   getPeople();
   getAlphabet();
-
+searchAll.addEventListener('click', () =>{
+  console.log('jjj')
+})
    populatePeople = (peopleArr, fromSearch) =>{
     alphabet.forEach(i => {
       if(!fromSearch) {        
