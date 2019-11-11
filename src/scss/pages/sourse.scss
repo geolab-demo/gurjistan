@@ -1,10 +1,11 @@
 .sourse {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding: 0 30px;
 }
 .sourseFilterForm {
-    max-width: 320px;
-    // margin: 0 auto;
+    width: 280px;
+    margin: 35px auto;
 }
 .filters {
     display: flex;
@@ -12,20 +13,44 @@
     color: $color_white;
 }
 .sourseFilterType {
-    border: 1px solid red;
+    width: 120px;
+    padding: 15px 0;
     color: $color_white;
+    font-size: 12px;
+    border: 1px solid $color_white;;
+    text-align: center;
 }
 .sourseFilterType.active {
-    background-color: red;
+    background-color: #DF4B4B;
+    border: none;
 }
 .sourseFilterParametrs {
-    display: flex;
+    display: none;
     flex-direction: column;
+    margin: 40px 0;
+}
+.sourseFilterParametrsItem {
+    margin: 30px 0;
+    -webkit-appearance: none;
+    color: $color_white;
+    font-size: 12px;
+    background: none;
+    border: none;
+    border-bottom: 0.7px solid #8E8E8E;
+    border-radius: unset;
+    padding-bottom: 10px;;
+}
+select:focus {
+    outline: none;
 }
 .sourseSearch {
     width: 100%;
-    padding: 10px;
-    background-color: red;
+    padding: 16px;
+    background-color: #DF4B4B;
     border: none;
     color: $color_white;
+    font-size: 14px;
+}
+.sourseFilterParametrs.active{
+    display: flex;
 }

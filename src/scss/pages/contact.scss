@@ -1,3 +1,6 @@
+.contact_info {
+    padding: 0 30px;
+}
 .social_icons {
     display: flex;
     justify-content: space-between;
@@ -7,6 +10,9 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+}
+.contact_footer {
+    position: relative;
 }
 a {
     color: #000;

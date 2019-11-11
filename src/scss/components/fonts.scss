@@ -33,3 +33,38 @@
   justify-content: center;
   font-size: 25px;
 }
+.icon-twitter:before {
+  content: "\e900";
+}
+.icon-instagram:before {
+  content: "\e901";
+}
+.icon-fb:before {
+  content: "\e902";
+}
+.icon-sms-envelope:before {
+  content: "\e903";
+}
+.icon-search:before {
+  content: "\e904";
+  color: #757575;
+}
+.icon-scroll:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-location:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-hand:before {
+  content: "\e907";
+  color: #ffe9e9;
+}
+.icon-user:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-copyright:before {
+  content: "\e909";
+}

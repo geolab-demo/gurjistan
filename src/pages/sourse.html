@@ -21,30 +21,47 @@
         </a>
        <form class="sourseFilterForm">
            <div class="filters">
-               <h2 class="sourseFilterType active">ფილტრი1</h2>
-               <h2 class="sourseFilterType">ფილტრი2</h2>
+               <h2 class="sourseFilterType active livaFilter" data-header='0'>ლივა</h2>
+               <h2 class="sourseFilterType docFilter" data-header='1'>დოკუმენტი</h2>
            </div>
-           <div class="sourseFilterParametrs">
-               <select name="document" >
-                    <option value="liva">დოკუმენტი</option>
+           <div class="sourseFilterParametrs active livaFilterContent" data-body='0'>
+               <select name="document" class="sourseFilterParametrsItem">
                     <option value="book">ლივა</option>
+                    <option value="document">დოკუმენტი</option>
                     <option value="version">ელ.ვერსია</option>
                 </select>
-                <select name="village">
+                <select name="village" class="sourseFilterParametrsItem">
                     <option value="liva">ლივა</option>
                     <option value="book">დოკუმენტი</option>
                     <option value="version">ელ.ვერსია</option>
                </select>
-                <select name="village">
+                <select name="village" class="sourseFilterParametrsItem">
                     <option value="liva">ელ. ვერსია</option>
                     <option value="book">ლივა</option>
                     <option value="version">დოკუმენტი</option>
                </select>
            </div>
+           <div class="sourseFilterParametrs docFilterContent" data-body='1'>
+            <select name="document" class="sourseFilterParametrsItem">
+                 <option value="document">დოკუმენტი</option>
+                 <option value="book">ლივა</option>
+                 <option value="version">ელ.ვერსია</option>
+             </select>
+             <select name="village" class="sourseFilterParametrsItem">
+                 <option value="liva">ლივა</option>
+                 <option value="book">დოკუმენტი</option>
+                 <option value="version">ელ.ვერსია</option>
+            </select>
+             <select name="village" class="sourseFilterParametrsItem">
+                 <option value="liva">ელ. ვერსია</option>
+                 <option value="book">ლივა</option>
+                 <option value="version">დოკუმენტი</option>
+            </select>
+          </div>
            <button type="submit" class="sourseSearch">ძიება</button>
        </form>
       </aside>
-        <div class="right_side  ">
+      <div class="right_side  ">
           <div class="container">
           <header>
             <nav id="menu">
@@ -97,5 +114,6 @@
       </div>
     </div>
     <script src="../shared/script.js"></script>
+    <script src="../js/sourse.js"></script>
   </body>
 </html>
