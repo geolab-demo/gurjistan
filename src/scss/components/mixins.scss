@@ -3,16 +3,24 @@
     align-items: center;
     justify-content: center;
 }
-@mixin hor_center {
+@mixin horCenter {
     display: grid;
     justify-content: center;
 }
-@mixin vertical {
-	display: grid;
-	align-items: center;
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 %vertical {
 	display: grid;
 	align-items: center;
 }
-//placeholder uparametro mixinis msgavisa, tu ar gamoviyeneb ar dakompilirdeba
+%flexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+%flexColumn {
+    display: flex;
+    flex-direction: column;
+}

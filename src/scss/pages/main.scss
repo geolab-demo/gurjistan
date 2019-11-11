@@ -3,13 +3,10 @@
 }
 main {
 	position: relative;
-	margin: 0 20px;
+	margin: 0 $paddingSize;
 }
 .main_img {
 	width: 100%;
 	position: absolute;
 	top: 0;
-}
-a:hover {
-	cursor: pointer;
 }

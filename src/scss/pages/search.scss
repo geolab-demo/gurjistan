@@ -6,7 +6,7 @@
     font-size: 24px
 }    
 .more_list {
-    color: red;
+    color: $hoverColor;
 }
 .moreInfo {
     font-size: 12px;
@@ -15,19 +15,19 @@
 }
 .personData {
     display: none;
-    color: $color_list;
+    color: $colorList;
     font-size: 10px;
 }
 .alphabet:visited {
-    color: red;
+    color: $hoverColor;
 }
 .alphabetItem {
     padding: 10px 0;
 }
 .search_form input {
-    background: #EEEEEE;
-    border: none;
-    color: #9A9A9A;
+    color: $colorList;
     font-size: 10px;
     padding: 5px;
+    background: #EEEEEE;
+    border: none;
 }

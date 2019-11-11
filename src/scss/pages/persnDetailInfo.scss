@@ -1,8 +1,8 @@
 .personAbout {
-    margin-bottom: 20px;
+    margin-bottom: $paddingSize;
 }
 .personName {
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid $hoverColor;
 }
 .personAdditionalnfo {
     margin-bottom: 30px;

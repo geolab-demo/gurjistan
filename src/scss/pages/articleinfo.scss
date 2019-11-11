@@ -1,14 +1,14 @@
 .articles_content {
 	display: grid;
-	grid-gap: 20px;
+	grid-gap: $paddingSize;
 }
 .author {
 	font-size: 18px;
-	padding-bottom: 20px;
+	padding-bottom: $paddingSize;
 }
 .articles_detail {
-	padding: 20px;
+	padding: $paddingSize;
 }
 .articles_detail p {
-	padding-top: 20px; 
+	padding-top: $paddingSize; 
 }

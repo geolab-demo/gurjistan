@@ -1,20 +1,19 @@
 //header
 header {
-	//@include vertical;
 	@extend %vertical;
 	width: 80%;
 	margin: 0 auto;
 }
 .header_navigation_link {
-	color: $color_black;
-	font-size: $text_size;
+	color: $colorBlack;
+	font-size: $textSize;
 }
 .header_navigation_link:hover {
-	border-bottom: 1px solid $hover_color;
+	border-bottom: 1px solid $hoverColor;
 	padding-bottom: 10px;
 }
 .header_navigation_link.active {
-	border-bottom: 1px solid $hover_color;
+	border-bottom: 1px solid $hoverColor;
 	padding-bottom: 10px;
 }
 .bgImage {

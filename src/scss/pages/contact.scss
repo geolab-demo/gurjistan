@@ -2,18 +2,13 @@
     padding: 0 30px;
 }
 .social_icons {
-    display: flex;
-    justify-content: space-between;
     width: 100px;
+    @extend %flexSpaceBetween;
 }
 .contact_footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
+    @extend %flexSpaceBetween;
+    padding: $paddingSize 0;
 }
 .contact_footer {
     position: relative;
-}
-a {
-    color: #000;
 }

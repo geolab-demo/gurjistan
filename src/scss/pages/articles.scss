@@ -8,21 +8,21 @@
 }
 .articles_item_title {
 	font-size: 30px;
-	color: $color_black;	
+	color: $colorBlack;	
 	padding-bottom: 30px;
 }
 .articles_item_text {
+	overflow: hidden;
 	max-width: 365px;
 	height: 175px;
-	overflow: hidden;
+	font-size: $textSize;
 	margin-bottom: 50px;
-	font-size: $text_size;
 }
 .more {
  	max-width: 150px;
-    text-align: center;
-	padding: 20px;
-	color: $color_white;
-	font-size: $text_size;
-	background-color: #DF4B4B;
+	text-align: center;
+	color: $colorWhite;
+	font-size: $textSize;
+	padding: $paddingSize;
+	background-color: $hoverColor;
 }

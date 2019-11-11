@@ -1,6 +1,6 @@
 @media only screen and (min-width: 320px){
 	header {
-		height: 20px;
+		height: $paddingSize;
 	}
 	/*resp_menu*/
 	.header_menu{
@@ -9,23 +9,19 @@
 	.resp_menu {
 		width: 40px;
 		height: 40px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flexCenter;
 		position: absolute;
 		top: 10px;
 		right: 10px;
 		z-index: 4;
 	}
 	.navbar_toggler {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flexCenter;
 	}
 	.toggler_item {
 		width: 30px;
 		height: 3px;
-		background-color: #fff;
+		background-color: $colorWhite;
 		border-radius: 10px;
 		transition: all ease-in-out 0.3s;
 	}
@@ -34,12 +30,12 @@
 		display: block;
 		width: 30px;
 		height: 3px;
-		background-color: #fff;
+		background-color: $colorWhite;
 		border-radius: 10px;
 		transition: all ease-in-out 0.3s;
 	}
 	.toggler_item.open::before, .toggler_item.open::after{
-		background-color: #000;
+		background-color: $colorBlack;
 	}
 	.toggler_item::before {
 		transform: translateY(-8px);
@@ -69,8 +65,7 @@
 	}
 	.resp_toggler_menu .header_navigation {
 		width: 100%;
-		display: flex;
-		flex-direction: column;
+		@extend %flexColumn;
 		align-items: center;
 		justify-content: space-around;
 		position: absolute;
@@ -78,7 +73,7 @@
 		bottom: 0;
 		left: 0;
 		z-index: 4;
-		background: #fff;
+		background: $colorWhite;
 		animation: resp_anim  400ms ease-in;
 	}
 	/*resp_menu end*/
@@ -87,13 +82,13 @@
 		width: 90%;
 	    display: grid;
 	    grid-gap: 30px;
-	    margin: 20px auto;
+	    margin: $paddingSize auto;
 	}
 	// article page
 	.articles_item {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-gap: 20px 0;
+		grid-gap: $paddingSize 0;
 		margin: 10px;
 	}
 	.articles_content {
@@ -114,21 +109,20 @@
 	.search_content {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-gap: 20px;
+		grid-gap: $paddingSize;
 		padding-right: 30px;
 	}
 	.alphabet_container {
 		height: 100%;
-		display: flex;
-		flex-direction: column;
+		@extend %flexColumn;
 		position: absolute;
 		right: 15px;
 		top: 25px;
-		color: #9A9A9A;
+		color: $colorList;
 		font-size: 11px;
 	}
 	.color .header_navigation_link {
-		color: #000;
+		color: $colorBlack;
 	}
 	.logo {
 		display: flex;
@@ -137,7 +131,7 @@
 	.email {
 		border-bottom: 1px solid #A4A4A4;
 		padding-bottom: 60px;
-		text-align: center;
+		text-align: $textCenter;
 	}
 	.social_icons {
 		position: absolute;
@@ -147,8 +141,7 @@
 }
 @media only screen and (min-width: 720px){
 	.aside_navigation {
-		display: flex;
-		flex-direction: column;
+		@extend %flexColumn;
 		flex-grow: 0;
 	}
 	.header_navigation {
@@ -161,12 +154,12 @@
 	.articles_item {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 20px 0;
+		grid-gap: $paddingSize 0;
 	}
 	//search page
 	.search_info {
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 20px;
+		grid-gap: $paddingSize;
 	}
 	.search_form {
 		justify-content: flex-end;
@@ -179,10 +172,10 @@
 	}
 	.alphabet_container {
 		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
 		position: static;
+		@extend %flexSpaceBetween;
+		flex-direction: row;
+		align-items: center;
 	}
 }
 @media only screen and (max-width: 991px){
@@ -215,33 +208,31 @@
 		display: block;
 	}
 	.color .header_navigation_link {
-		color: #fff;
+		color: $color-white;
 	}
 	.page {
 		display: grid;
 		grid-template-columns: 1fr 3fr;
 	}
 	.left_side {
+		width: 30%;
+		height: $fullHeight;
 		position: fixed;
-		// left: 0;
 		top: 0;
 		bottom: 0;
-		height: 100vh;
-		// right: 80%;
-		width: 30%;
 	}
 	.right_side {
+		height: $fullHeight;
 		position: absolute;
 		left: 30%;
 		right: 0;
-		height: 100vh;
 	}
 	/*about page*/
 	.about_page {
 	    grid-template-columns: 1fr 1fr;
 	}
 	.email {
-		padding-bottom: 20px;
+		padding-bottom: $paddingSize;
 		text-align: left;
 	}
 	.social_icons {
