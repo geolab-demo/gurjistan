@@ -1,6 +1,6 @@
 // left_side
 .left_side {
-    @extend %flexColumn;
+    @include flexSpaceBetween;
     background-color: $leftSizeBackground;
 }
 .aside_navigation_item {

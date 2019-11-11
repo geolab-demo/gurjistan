@@ -3,10 +3,10 @@
 }
 .social_icons {
     width: 100px;
-    @extend %flexSpaceBetween;
+    @include flexSpaceBetween;
 }
 .contact_footer {
-    @extend %flexSpaceBetween;
+    @include flexSpaceBetween;
     padding: $distance 0;
 }
 .contact_footer {

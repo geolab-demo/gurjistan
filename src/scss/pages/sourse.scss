@@ -8,7 +8,7 @@
     margin: 35px auto;
 }
 .filters {
-    @extend %flexSpaceBetween;
+    @include flexSpaceBetween;
     color: $colorWhite;
 }
 .sourseFilterType {

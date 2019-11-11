@@ -16,11 +16,7 @@
 	display: grid;
 	align-items: center;
 }
-%flexSpaceBetween {
+@mixin flexSpaceBetween {
     display: flex;
     justify-content: space-between;
-}
-%flexColumn {
-    display: flex;
-    flex-direction: column;
 }
