@@ -12,7 +12,7 @@
     color: $colorWhite;
 }
 .sourseFilterType {
-    width: 120px;
+    width: 1$distance;
     text-align: center;
     color: $colorWhite;
     font-size: 12px;
@@ -47,7 +47,7 @@ select:focus {
     color: $colorWhite;
     font-size: 14px;
     border: none;
-    padding: $paddingSize;
+    padding: $distance;
     background-color: $hoverColor;
 }
 .sourseFilterParametrs.active{

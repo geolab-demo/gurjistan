@@ -7,7 +7,7 @@
 }
 .contact_footer {
     @extend %flexSpaceBetween;
-    padding: $paddingSize 0;
+    padding: $distance 0;
 }
 .contact_footer {
     position: relative;

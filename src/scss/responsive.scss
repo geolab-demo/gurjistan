@@ -1,6 +1,6 @@
 @media only screen and (min-width: 320px){
 	header {
-		height: $paddingSize;
+		height: 20px;
 	}
 	/*resp_menu*/
 	.header_menu{
@@ -82,13 +82,13 @@
 		width: 90%;
 	    display: grid;
 	    grid-gap: 30px;
-	    margin: $paddingSize auto;
+	    margin: $distance auto;
 	}
 	// article page
 	.articles_item {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-gap: $paddingSize 0;
+		grid-gap: $distance 0;
 		margin: 10px;
 	}
 	.articles_content {
@@ -109,7 +109,7 @@
 	.search_content {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-gap: $paddingSize;
+		grid-gap: $distance;
 		padding-right: 30px;
 	}
 	.alphabet_container {
@@ -154,12 +154,12 @@
 	.articles_item {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: $paddingSize 0;
+		grid-gap: $distance 0;
 	}
 	//search page
 	.search_info {
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: $paddingSize;
+		grid-gap: $distance;
 	}
 	.search_form {
 		justify-content: flex-end;
@@ -208,7 +208,7 @@
 		display: block;
 	}
 	.color .header_navigation_link {
-		color: $color-white;
+		color: $colorWhite;
 	}
 	.page {
 		display: grid;
@@ -232,7 +232,7 @@
 	    grid-template-columns: 1fr 1fr;
 	}
 	.email {
-		padding-bottom: $paddingSize;
+		padding-bottom: $distance;
 		text-align: left;
 	}
 	.social_icons {

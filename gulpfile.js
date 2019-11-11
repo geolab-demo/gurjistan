@@ -5,7 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 // Compile Sass & Inject Into Browser
 gulp.task('sass', function() {
-    return gulp.src(['src/scss/*.scss'])
+    return gulp.src(['src/scss/style.scss'])
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
