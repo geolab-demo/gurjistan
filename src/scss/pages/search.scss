@@ -16,7 +16,7 @@
 .personData {
     display: none;
     color: $colorList;
-    font-size: 10px;
+    font-size: 13px;
 }
 .alphabet:visited {
     color: $hoverColor;
@@ -24,10 +24,14 @@
 .alphabetItem {
     padding: 10px 0;
 }
+.alphabetItem a {
+    font-size: 13px;
+}
 .search_form input {
     color: $colorList;
-    font-size: 10px;
+    font-size: 15px;
     padding: 5px;
-    background: #EEEEEE;
     border: none;
+    margin: 0 5px;
+    background: none;
 }

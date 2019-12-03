@@ -117,7 +117,9 @@
 		grid-template-columns: 1fr;
 	}
 	.search_form {
-		display: grid;
+		display: flex;
+		justify-content: space-around;
+		background: #EEEEEE;
 	}
 	.search_content {
 		display: grid;
@@ -173,9 +175,6 @@
 	.search_info {
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: $distance;
-	}
-	.search_form {
-		justify-content: flex-end;
 	}
 	.search_content {
 		grid-template-columns: repeat(3, 1fr);
