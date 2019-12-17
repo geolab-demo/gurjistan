@@ -118,7 +118,7 @@
 	}
 	.search_form {
 		display: flex;
-		justify-content: space-around;
+		align-items: center;
 		background: #EEEEEE;
 	}
 	.search_content {
@@ -173,7 +173,7 @@
 	}
 	//search page
 	.search_info {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 2fr .8fr;
 		grid-gap: $distance;
 	}
 	.search_content {
@@ -202,6 +202,9 @@
 	}
 	.about_content {
 		order: 2;
+	}
+	.articles_content {
+		grid-gap: $distance;
 	}
 }
 @media only screen and (min-width: 992px){
@@ -250,5 +253,8 @@
 	.social_icons {
 		position: static;
 		text-align: left;
+	}
+	.sourseFilterType {
+		font-size: 15px;
 	}
 }

@@ -29,7 +29,7 @@
     flex-direction: column;
     margin: 40px 0;
 }
-.sourseFilterParametrsItem {
+.sourseFilter {
     margin: 30px 0;
     -webkit-appearance: none;
     color: $colorWhite;
@@ -39,14 +39,18 @@
     border-bottom: 0.7px solid #8E8E8E;
     border-radius: unset;
     padding-bottom: 10px;;
+    position: relative;
 }
-.sourseFilterParametrsItem::after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 3px;
-    background: red;
-}
+.sourseFilterParametrsItem{
+    padding: 5px 0;
+    -webkit-appearance: none;
+    color: #fff;
+    font-size: 12px;
+    background: none;
+    border: none;
+    border-radius: unset;
+    width: 100%;
+ }
 select:focus {
     outline: none;
 }
@@ -63,4 +67,19 @@ select option {
 }
 .sourseFilterParametrs.active{
     display: flex;
+}
+
+
+.select__arrow {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    width: 20px;
+    display: block;
+    font-size: 14px;
+    color: var(--mainColor);
+    font-family: 'fontAwesome';
+}
+.select2-selection__arrow ::before {
+    content: "\f078";
 }
